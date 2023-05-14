@@ -6,8 +6,6 @@ server:
 
 #App name/Postgres configuration
 spring:
-  application:
-    name: event-app
   datasource:
     driver-class-name: org.postgresql.Driver
     url: ${MY_POSTGRES_URL}

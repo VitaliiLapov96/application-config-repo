@@ -1,7 +1,3 @@
-spring:
-  application:
-    name: discovery
-
 #Spring configuration
 server:
   port: 8761
