@@ -1,16 +1,18 @@
 #Spring configuration
 server:
-  port: 8081
+  port: 8080
   servlet:
     context-path: /event-app
 
 #App name/Postgres configuration
 spring:
+  application:
+    name: event-app
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/events
-    username: root
-    password: Root123
+    url: ${MY_POSTGRES_URL}
+    username: ${USERNAME}
+    password: ${PASSWORD}
   jpa:
     show-sql: true
     hibernate:
@@ -23,4 +25,11 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://discovery:8761/eureka
+      defaultZone: ${EUREKA_URL}
+      
+#Actuator configuration
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
