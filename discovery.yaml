@@ -7,3 +7,10 @@ eureka:
   client:
     registerWithEureka: false
     fetchRegistry: false
+    
+#Actuator configuration
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
