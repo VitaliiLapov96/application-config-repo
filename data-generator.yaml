@@ -9,3 +9,10 @@ eureka:
   client:
     serviceUrl:
       defaultZone: ${EUREKA_URL}
+
+#Actuator configuration
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
