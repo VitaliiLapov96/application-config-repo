@@ -7,7 +7,10 @@ zuul:
   routes:
     event-app:
       path: /event-app/**
-      url: http://localhost:8080/event-app
+      url: http://event-app:8080/event-app
+    data-generator:
+      path: /data-generator/**
+      url: http://data-generator:8081/data-generator
 
 #Eureka configuration
 eureka:
